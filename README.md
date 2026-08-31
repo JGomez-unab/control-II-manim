@@ -4,9 +4,19 @@ An educational Manim animation illustrating modal decomposition in a three-dimen
 
 This repository accompanies the **Control II** course taught by Juan Sebastián Gómez at Universidad Andrés Bello.
 
-## Preview
+## Simulations
+
+### Modal decomposition
 
 ![Modal decomposition animation](assets/modal-decomposition.gif)
+
+Shows the individual modal contributions of a three-dimensional linear system and their reconstruction into the complete state response.
+
+### Switched modal response
+
+![Switched modal response animation](assets/switched-modal-monotonic.gif)
+
+Compares an oscillatory system with a modified monotonic system, highlights the switching instant, and merges two state-plane projections into a three-dimensional phase trajectory.
 
 ## Mathematical idea
 
@@ -40,10 +50,19 @@ docker run --rm -v "${PWD}:/manim" manimcommunity/manim:v0.20.1 \
   manim -ql --format=gif modal_decomposition.py ModalDecomposition3DSnapshot
 ```
 
+Render the switched modal animation with:
+
+```bash
+docker run --rm -v "${PWD}:/manim" manimcommunity/manim:v0.20.1 \
+  manim -ql --format=gif switched_modal_monotonic.py SwitchedModalMonotonicAnimation
+```
+
 ## Contents
 
 - `modal_decomposition.py`: reproducible Manim scene.
 - `assets/modal-decomposition.gif`: rendered preview.
+- `switched_modal_monotonic.py`: switched state-space Manim scene.
+- `assets/switched-modal-monotonic.gif`: rendered preview.
 - `LICENSE`: MIT License.
 
 ## Course
